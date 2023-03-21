@@ -64,4 +64,4 @@ print("Apellido y Nro Legajo Empleados que cobran mas de 200k")
 
 for i in range(cantEmpleados):
     if float(registro[i][4])>200000:
-        print(f"Apellido: {registro[i][1]}, Legajo: {registro[i][0]}")
+        print(f"{registro[i][1]},{registro[i][0]}")
