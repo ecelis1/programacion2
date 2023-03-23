@@ -1,4 +1,4 @@
-def palindromo(palabra)
+def palindromo(palabra):
       
     #se le borran los espacios, porque se va a servir tanto para palabras con o sin espacio
     #Ejemplo: luz azul
