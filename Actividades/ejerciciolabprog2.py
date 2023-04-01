@@ -1,4 +1,5 @@
 import os
+
 #limpiar pantalla
 def limpiarPantalla():
     os.system ("cls") 
@@ -23,7 +24,6 @@ def mostrarMenu():
     return(opcion)
 
 #Cargar Vector
-
 def cargarVector():
     limpiarPantalla()
     l=int(input('Ingrese la cantidad de edades que desea ingresar: '))
@@ -48,15 +48,19 @@ def mostrarVector(v):
         limpiarPantalla()
     else:
         input(f'\nLas edades son:\n\n{v}\n\nPresione tecla "ENTER" para volver al MENU PRINCIPAL')
+
 #Devuelve el promedio
 def promedio(sumatoria,vector):
     limpiarPantalla()
-    if sumatoria==0:
+    if resultadoSumatoria==0:
         input('ERROR, no se puede realizar el promedio, ya que no hay datos cargados.\nDebes cargar las edades.')
     else:
         promedio = sumatoria/len(vector)
+        print(f"El promedio es: ",promedio, " años de edad.")
+        input('\nPROMEDIO REALIZADO EXITOSAMENTE \nPresione tecla "ENTER" para volver al MENU PRINCIPAL')
         return promedio
-
+        
+        
 #Diferencia de edad promedio
 def diferenciaEdadPromedio(vector):
     limpiarPantalla()
@@ -69,20 +73,16 @@ def diferenciaEdadPromedio(vector):
         diferencia = vector[i]-promedio
         print(vector[i],promedio,diferencia)
 
+#SUMATORIA DE EDADES
 def sumatoria(vector):
     limpiarPantalla()
-    resultado = 0
+    global resultadoSumatoria
+    resultadoSumatoria = 0
     for i in range(len(vector)):
-        resultado=resultado + vector[i]
-        
-    if resultado==0:
-        print(f'No se puede hacer la sumatoria de edades porque no hay edades cargadas.\n\n')
-        input('Presione la tecla "ENTER" para volver al MENU PRINCIPAL')
-    elif resultado>0:
-        print(f'La sumatoria de edades es: {resultado}.\n\n')
-        input('Presione la tecla "ENTER" para volver al MENU PRINCIPAL')
-    return resultado
-    
+        resultadoSumatoria=resultadoSumatoria + vector[i]
+    return resultadoSumatoria
+
+#EDADES MAYORES AL PROMEDIO 
 def edadesMayoresAlPromedio(v1,promedio):
     limpiarPantalla()
     v2 = []
@@ -92,7 +92,8 @@ def edadesMayoresAlPromedio(v1,promedio):
         if v1[x]>promedio:
             v2.append(v1[x])
         return print('Edades mayores al promedio: ',v2)
-    
+
+#MAYOR EDAD EN ENTERO
 def mayorEdadInt(vector):
     limpiarPantalla()
     mayor=0
@@ -101,13 +102,14 @@ def mayorEdadInt(vector):
             mayor=vector[i]
     return print('La Mayor edad es: ',mayor)
 
+#ORDENAR EDADES
 def orden_edad(vector):
     limpiarPantalla()
     vectOrdenado = []
     vectOrdenado = vector
     vectOrdenado.sort()
-    print('El vector ordenado es: ',vectOrdenado)
-
+    print('\nEl vector ordenado es: ',vectOrdenado)
+    input('\nORDENAMIENTO POR FUNCION SORT REALIZADO DE MANERA EXITOSA\nPresione tecla "ENTER" para volver al MENU PRINCIPAL')
 
 def main():
    v1 = []
@@ -122,19 +124,28 @@ def main():
                 mostrarVector(v1)
             case "3":
                 sumatoria(v1)
+                if resultadoSumatoria==0:
+                    print(f'No se puede hacer la sumatoria de edades porque no hay edades cargadas.\n\n')
+                    input('Presione la tecla "ENTER" para volver al MENU PRINCIPAL')
+                elif resultadoSumatoria==1:
+                    print(f'La sumatoria de edades es: {resultadoSumatoria} año.\n\n')
+                    input('Presione la tecla "ENTER" para volver al MENU PRINCIPAL')
+                elif resultadoSumatoria>1:
+                    print(f'La sumatoria de edades es: {resultadoSumatoria} años.\n\n')
+                    input('Presione la tecla "ENTER" para volver al MENU PRINCIPAL')
             case "4":
                 promedio(sumatoria(v1),v1)
             case "5":
                 edadesMayoresAlPromedio(v1,promedio)
             case "6":
-                mayorEdadInt()
+                mayorEdadInt(v1)
             case "7":
                 print('falta hacer')
             #mayorEdadStr()
             case "8":
-                orden_edad()
+                orden_edad(v1)
             case "9":
-                diferenciaEdadPromedio()
+                diferenciaEdadPromedio(v1)
             case "10":
                 break
             case other:
