@@ -120,3 +120,5 @@ for f in range(1,cantLegajosAlumnos):
             datosExamenFinal[f][c]=resultado
 
 pprint.pprint(datosExamenFinal)
+
+
