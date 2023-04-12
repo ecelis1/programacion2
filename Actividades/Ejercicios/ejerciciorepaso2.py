@@ -22,7 +22,7 @@ for i in range(1,5):
         if i==j:
             equipos[i][j]=0;
         else:
-            resultado = int(input(f"Ingrese el resultado del partido entre el Equipo {i+1} y Equipo {j+1}): "))
+            resultado = int(input(f"Ingrese el resultado del partido entre el Equipo {i+1} y Equipo {j+1}: "))
             equipos[i][j] = resultado
 
             #Acumulo los goles hechos
