@@ -12,18 +12,18 @@ public class ArchivoJava2 {
       File archivo = new File(ruta);
       
       try {
-        FileWriter indata = new FileWriter(archivo,true);
+            FileWriter indata = new FileWriter(archivo,true);
          
-        indata.append("Datos de los Estudiantes de Programacion 2");
+            indata.append("Datos de los Estudiantes de Programacion 2\n");
 
-        while (!"Salir".equals(nombre)){
+            while (!"Salir".equals(nombre)){
         
-            System.out.println("Ingrese el nombre del estudiante, sino escriba 'Salir'");
-            nombre = sc.next();
-            indata.append(nombre);
+               System.out.println("Ingrese el nombre del estudiante, sino escriba 'Salir'");
+               nombre = sc.next();
+               indata.append(nombre);
 
-        }
-        indata.close();
+            }
+        indata.close();   
         System.out.println("El archivo se ha creado exitosamente.");
       } catch (IOException e) {
          e.printStackTrace();
