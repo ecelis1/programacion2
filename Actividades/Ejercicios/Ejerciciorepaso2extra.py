@@ -56,5 +56,5 @@ for i in range(5):
         goles_marcados += resultados[i][j]
         goles_recibidos += resultados[j][i]
     
-    # imprimir estadísticas del equipo
+    #MUESTRO POR PANTALLA LA ESTADISTICAS DE CADA EQUIPO
     print(f"""Equipo {i+1}:\nTriunfos: {triunfos}\nEmpates: {empates}\nDerrotas: {derrotas}\nGoles marcados: {goles_marcados}\nGoles recibidos: {goles_recibidos}\n""")
