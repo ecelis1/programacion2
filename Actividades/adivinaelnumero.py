@@ -53,3 +53,19 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
+if (a==b) & (b==c);{
+    printf("equilatero")
+} else {
+    if(a!=b & b!=c & c!=a);{
+        print("escaleno")
+    } else {
+        printf("isosceles");
+    }
+}
