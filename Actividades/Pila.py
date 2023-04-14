@@ -24,8 +24,17 @@ def poner(pila,tope,max,dato):
     if band==True:
         print('Desbordamiento - Pila Llena')
     else:
-        dato = input('Coloque un dato numerico a insertar: ')
-
+        while True:
+            try:
+                dato = int(input("Ingrese un número entero: "))
+                break
+            except ValueError:
+                print("Error: El valor ingresado no es un número entero.")
+            except:
+                print("Ocurrió un error inesperado.")
+            if dato == "":
+                print("Error: No se puede ingresar un valor vacío.")
+                
         pila.append(dato)
         tope+=1
 
