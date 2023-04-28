@@ -1,4 +1,5 @@
 import os
+
 def compararPatente(patente):
         try:
             # Intentar abrir el archivo en modo lectura

@@ -1,0 +1,6 @@
+selecciones,jugadores
+ecuador,valencia-ibarra-cifuentes-orejuela-mena
+venezuela,soteldo-roldan-herrera-machis-rincon-rosales
+argentina,messi-de paul-dybala-aguero-martinez-paredes
+colombia,rodriguez-cuadrado-mina-muriel-murillo-barrios
+mexico,ochoa-jimenez-pizarro-alvarez-moreno
