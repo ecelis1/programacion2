@@ -1,0 +1,19 @@
+with open('facturas.txt', 'r') as archivo
+facturas = [[0 for meses in range(13)]for servicios in range(3)]
+
+facturas[0][0]='electricidad'
+facturas[1][0]='agua'
+facturas[2][0]='gas'
+
+servicio=str(input('Ingrese el servicio que desea agregar: '))
+mes=str(input('Ingrese el mes que desea agregar del 1 al 12: '))
+importe=str(input('ingrese el importe de mes: '))
+
+if facturas[0][0] == servicio:
+    facturas[0][int(mes)]=importe
+
+with open('facturas.txt', 'w') as archivo:
+    for fila in facturas:
+        archivo.write(','.join(map(str, fila)) + '\n')
+
+    
