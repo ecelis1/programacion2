@@ -13,13 +13,13 @@ def cargarCliente():
         clientes.append(cliente)
 
     if os.path.exists("Files\clientes.txt"):
-        with open("Files\clientes.txt", "r") as archivo:
+        with open("Files\clientes.txt", "a+") as archivo:
+            archivo.seek(0)
             clientes_existentes = archivo.readlines()
 
-        with open("Files\clientes.txt", "w") as archivo:
             for cliente_existente in clientes_existentes:
                 if cliente_existente.strip() == cliente:
-                    opcion = input(f"El cliente '{cliente}' ya existe. ¿Desea eliminarlo? (s/n): ")
+                    opcion = input(f"El cliente '{cliente}' ya existe. ¿Desea eliminarlo antes de cargarlo? (s/n): ")
                     if opcion.lower() == "s":
                         clientes.remove(cliente)
                     break
