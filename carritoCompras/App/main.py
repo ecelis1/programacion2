@@ -10,7 +10,7 @@ from Functions.cargarCliente import cargarCliente
 from Functions.cargarProductos import cargarProductos
 
 def main():
-    selection = int(input('MENU PRINCIPAL\n1 - Cargar Cliente\n2 - Cargar Productos\n 3 - SALIR'))
+    selection = int(input('MENU PRINCIPAL\n1 - Cargar Cliente\n2 - Cargar Productos\n3 - SALIR'))
     if selection == 1:
             cargarCliente()
     elif selection == 2:

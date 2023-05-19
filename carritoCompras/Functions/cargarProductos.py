@@ -11,11 +11,11 @@ def cargarProductos():
         producto = nombre + " " + cantidad
         productos.append(producto)
 
-    if os.path.exists("Files\clientes.txt"):
-        with open("Files\clientes.txt", "r") as archivo:
+    if os.path.exists("Files\productos.txt"):
+        with open("Files\productos.txt", "r") as archivo:
             productosExistentes = archivo.readlines()
 
-        with open("Files\clientes.txt", "w") as archivo:
+        with open("Files\productos.txt", "w") as archivo:
             for producto_Existente in productosExistentes:
                 if producto_Existente.strip() == producto:
                     opcion = input(f"El producto '{producto}' ya existe. ¿Desea eliminarlo? (s/n): ")
@@ -25,7 +25,7 @@ def cargarProductos():
 
             archivo.write('\n'.join(productos) + '\n')
     else:
-        with open("Files\clientes.txt", "w") as archivo:
+        with open("Files\productos.txt", "w") as archivo:
             archivo.write('\n'.join([productos]) + '\n')
 
     print("Productos cargados correctamente en el archivo")
