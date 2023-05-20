@@ -1,4 +1,6 @@
-import Clases.Producto
+from pyexpat import model
+from Modelo.Producto import Producto
+
 class ItemCarrito:
     def __init__(self,producto,cantidad):
          self.producto = producto
@@ -17,5 +19,4 @@ class ItemCarrito:
         self._cantidad = cantidad
 
     def calcularImporte(self):
-         if (isinstance(self.producto,Clases.Producto.Producto)):
-            return self.cantidad * self.producto.get_precio()
+        return int(self.cantidad) * int(self.producto.get_precio())
