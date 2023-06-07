@@ -1,0 +1,2 @@
+class VistaUsuario:
+    pass
