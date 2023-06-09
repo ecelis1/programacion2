@@ -19,6 +19,7 @@ class ControladorUsuario:
             usuario = self.modelo.obtenerUsuarioPorDNI(dni)
             if usuario is not None:
                 if usuario.isPassFuerte():
+                    self.vista.MostrarUsuarios
                     self.vista.UsuarioTieneContraseniaFuerte(usuario)
                 else:
                     self.vista.UsuarioTieneContraseniaDebil(usuario)
@@ -43,6 +44,26 @@ class ControladorUsuario:
         if self.modelo.RegistrarUsuario(apellido,nombre,dni,mail,password,estado):
             self.vista.MostrarMensajeError(f'El Mail: {mail} Ya existe')
             
+    def controladorMenu(self):
+        while True:
+            try:    
+                seleccion = input(self.vista.MostrarMenu())
+            except ValueError:
+                print('Opcion no valida')
 
+            if seleccion == "1":
+                self.UsuariosHabilitados()
+            elif seleccion == "2":
+                self.verificarSiPassEsFuerte()
+            elif seleccion == "3":
+                dni = input('Ingrese el DNI del USUARIO: ')
+                self.verificarPasswordUsuario(dni)
+            elif seleccion == "4":
+                self.verificarRegistro()
+            elif seleccion == "5":
+                self.vista.MostrarMensaje('Usted ha salido del programa')
+                break
+            else:
+                print("Opción INCORRECTA. Por favor, seleccione nuevamente.")
         
     
