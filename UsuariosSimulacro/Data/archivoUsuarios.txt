@@ -1,0 +1,6 @@
+Celis Giletta,Emanuel,39734826,ema_celis@hotmail.com,a123JOSE,habilitado
+Giletta,Jose,38734826,jose@hotmail.com,a123JOSE,habilitado
+Genaro,Matias,40734826,matias@hotmail.com,a123JOSE,deshabilitado
+Becerra,Francisco,13787835,pancho123@gmail.com,LOSpases2580456,habilitado
+Basso,Juan,15621379,juanelvaso123@hotmail.com,ELBASOjuan2580456,deshabilitado
+Celis,luisi,15504355,laluisi123@hotmail.com,LAMAla15621379,habilitado
